@@ -1,17 +1,23 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
+  <h1><%= @article.title %></h1>
+
 
 <p>
-  <strong>Description:</strong>
+
   <%= @article.description %>
+
 </p>
 
+
 <p>
-  <strong>Paragraph:</strong>
+  <%if @article.image.attached? %>
+    <%=image_tag @article.image ,class:"img-fluid"%>
+  <% end %>  
+</p>
+
+
+<p>
   <%= @article.paragraph %>
 </p>
 
