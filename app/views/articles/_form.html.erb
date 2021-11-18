@@ -27,6 +27,11 @@
   </div>
 
   <div class="field mb-3">
+    <%= form.label :image %>
+    <%= form.file_field :image, accept: 'image/png, image/gif, image/jpeg'  ,class:"form-control" %>
+  </div>
+
+  <div class="field mb-3">
     <%= form.submit %>
   </div>
 <% end %>
