@@ -1,34 +1,37 @@
 <p id="notice"><%= notice %></p>
 
+<div style="justify-content: center;display: flex;" >
+  <div style="max-width:680px" >
+  <%# <div class="container-{680px}"> %>
+    <br>
 
-<%# <div class="container"></div> %>
-  <br>
-
-  <h1>
-    <%= @article.title %> 
-  </h1>
-
-
-  <p>
-    <%= @article.description %>
-  </p>
+    <h1>
+      <%= @article.title %> 
+    </h1>
 
 
-  <p>
-    <%if @article.image.attached? %>
-      <%=image_tag @article.image ,class:"img-fluid"%>
-    <% end %>  
-  </p>
+    <p>
+      <%= @article.description %>
+    </p>
+
+    
+    <%# <p style="justify-content: center;display: flex;" > %>
+    <p style="flex-direction: column;display: flex;" > 
+      <%if @article.image.attached? %>
+        <%=image_tag @article.image ,class:"img-fluid"%>
+      <% end %>  
+    </p>
 
 
-  <p>
-    <%= @article.paragraph %>
-  </p>
+    <p>
+      <%= @article.paragraph %>
+    </p>
 
 
 
 
 
-<%= link_to 'Edit', edit_article_path(@article) ,class:"btn btn-secondary"%> |
-<%= link_to 'Back', articles_path ,class:"btn btn-secondary"%>
-<%# </div> %>
+    <%= link_to 'Edit', edit_article_path(@article) ,class:"btn btn-secondary"%> |
+    <%= link_to 'Back', articles_path ,class:"btn btn-secondary"%>
+  </div>
+</div>
