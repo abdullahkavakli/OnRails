@@ -1,24 +1,11 @@
-# README
+# Rails Blog 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the source code repository for my Rails Blog.
 
-Things you may want to cover:
 
-* Ruby version
+Before run, write this to command line:
 
-* System dependencies
+bundle exec rake webpacker:install
 
-* Configuration
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+If you got an error called "PendingMigrationError" just click "Run pending migrations"
