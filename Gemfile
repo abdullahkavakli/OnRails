@@ -25,6 +25,9 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Storage variant
 gem 'image_processing', '~> 1.2'
 
+#For auth
+gem 'devise', '~> 4.8'
+
 #use active storage
 gem 'active_storage_validations'
 
