@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <div style="justify-content: center;display: flex;" >
-  <div style="max-width:680px" >
+  <div style="max-width:680px;width: 100%;" >
   <%# <div class="container-{680px}"> %>
     <br>
 
@@ -27,15 +27,14 @@
       <%= @article.content %>
     </p>
 
-
+<%# 
     <p>
       <%= @article.paragraph %>
-    </p>
+    <%# </p> %>
 
 
 
-
-
+    <br>
     <%= link_to 'Edit', edit_article_path(@article) ,class:"btn btn-secondary"%> |
     <%= link_to 'Back', articles_path ,class:"btn btn-secondary"%>
   </div>
