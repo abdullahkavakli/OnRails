@@ -36,6 +36,13 @@
     <%= form.rich_text_area :content,class:"form-control" %>
   </div>
 
+
+  <div class="field form-group">   
+    <%#= form.number_field :user_id, class:"form-control", value: current_user.id, type: :hidden %>
+    <%= form.number_field :user_id, id: :article_user_id, class:"form-control", value: current_user.id, type: :hidden %>
+  </div>
+
+
   <div class="field mb-3">
     <%= form.submit %>
   </div>
