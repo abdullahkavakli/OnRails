@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: %i[ show edit update destroy ]
   before_action :authenticate_user!, except: [:index, :show ]
+  before_action :correct_user, only: [:edit, :update, :destroy]
   # GET /articles or /articles.json
   def index
     @articles = Article.all
@@ -12,7 +13,8 @@ class ArticlesController < ApplicationController
 
   # GET /articles/new
   def new
-    @article = Article.new
+    #@article = Article.new
+    @article = current_user.article.build
   end
 
   # GET /articles/1/edit
@@ -21,7 +23,8 @@ class ArticlesController < ApplicationController
 
   # POST /articles or /articles.json
   def create
-    @article = Article.new(article_params)
+    #@article = Article.new(article_params)
+    @article = current_user.article.build(article_params)
 
     respond_to do |format|
       if @article.save
@@ -55,6 +58,16 @@ class ArticlesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+
+  def correct_user
+    @article = current_user.article.find_by(id: params[:id])
+    #redirect_to friends_path, notice: "Not Authorized To Edit This Friend" if @friend.nil?
+    redirect_to articles_path, notice: "Not Authorized To Edit This Article" if @article.nil?
+  end
+
+
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
