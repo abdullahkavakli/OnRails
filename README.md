@@ -1,4 +1,4 @@
-# Rails Blog 
+# OnRails Blog 
 
 This is the source code repository for my OnRails blog(Ruby on Rails is used).
 
