@@ -1,6 +1,6 @@
 # Rails Blog 
 
-This is the source code repository for my Rails Blog.
+This is the source code repository for my OnRails blog(Ruby on Rails is used).
 
 Before all you need to install imagemagick from here(you can follow this tutorial https://www.youtube.com/watch?v=JP1eJD_-r3g):
 https://www.imagemagick.org/script/download.php#windows
